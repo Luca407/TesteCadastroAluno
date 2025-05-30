@@ -37,13 +37,12 @@
             txtCurso = new TextBox();
             mtxtNascimento = new MaskedTextBox();
             groupBox1 = new GroupBox();
-            btnListar = new Button();
             btnCadastrar = new Button();
             btnEditar = new Button();
             btnExcluir = new Button();
-            dataGridView1 = new DataGridView();
+            dgvAlunos = new DataGridView();
             groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvAlunos).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -136,20 +135,10 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Login";
             // 
-            // btnListar
-            // 
-            btnListar.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnListar.Location = new Point(308, 109);
-            btnListar.Name = "btnListar";
-            btnListar.Size = new Size(107, 36);
-            btnListar.TabIndex = 13;
-            btnListar.Text = "Listar";
-            btnListar.UseVisualStyleBackColor = false;
-            // 
             // btnCadastrar
             // 
             btnCadastrar.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnCadastrar.Location = new Point(308, 36);
+            btnCadastrar.Location = new Point(378, 36);
             btnCadastrar.Name = "btnCadastrar";
             btnCadastrar.Size = new Size(107, 36);
             btnCadastrar.TabIndex = 15;
@@ -160,47 +149,48 @@
             // btnEditar
             // 
             btnEditar.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnEditar.Location = new Point(463, 36);
+            btnEditar.Location = new Point(378, 89);
             btnEditar.Name = "btnEditar";
             btnEditar.Size = new Size(107, 36);
             btnEditar.TabIndex = 16;
             btnEditar.Text = "Editar";
             btnEditar.UseVisualStyleBackColor = false;
+            btnEditar.Click += btnEditar_Click;
             // 
             // btnExcluir
             // 
             btnExcluir.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnExcluir.Location = new Point(463, 109);
+            btnExcluir.Location = new Point(378, 142);
             btnExcluir.Name = "btnExcluir";
             btnExcluir.Size = new Size(107, 36);
             btnExcluir.TabIndex = 17;
             btnExcluir.Text = "Excluir";
             btnExcluir.UseVisualStyleBackColor = false;
+            btnExcluir.Click += btnExcluir_Click;
             // 
-            // dataGridView1
+            // dgvAlunos
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(63, 257);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(531, 241);
-            dataGridView1.TabIndex = 18;
+            dgvAlunos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvAlunos.Location = new Point(63, 257);
+            dgvAlunos.Name = "dgvAlunos";
+            dgvAlunos.Size = new Size(531, 241);
+            dgvAlunos.TabIndex = 18;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(666, 541);
-            Controls.Add(dataGridView1);
+            Controls.Add(dgvAlunos);
             Controls.Add(btnExcluir);
             Controls.Add(btnEditar);
             Controls.Add(btnCadastrar);
-            Controls.Add(btnListar);
             Controls.Add(groupBox1);
             Name = "Form1";
             Text = "Form1";
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvAlunos).EndInit();
             ResumeLayout(false);
         }
 
@@ -215,10 +205,9 @@
         private TextBox txtCurso;
         private MaskedTextBox mtxtNascimento;
         private GroupBox groupBox1;
-        private Button btnListar;
         private Button btnCadastrar;
         private Button btnEditar;
         private Button btnExcluir;
-        private DataGridView dataGridView1;
+        private DataGridView dgvAlunos;
     }
 }
